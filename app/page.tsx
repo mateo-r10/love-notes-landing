@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -5,7 +6,26 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       {/* Hero */}
       <section className="flex-1 flex flex-col items-center justify-center px-6 py-20 text-center">
-        <div className="text-6xl mb-6">💌</div>
+        {/* App Icon + iPhone Mockup */}
+        <div className="flex flex-col items-center mb-8">
+          {/* iPhone mockup */}
+          <div className="relative w-[220px] h-[440px] bg-black rounded-[3rem] p-[10px] shadow-2xl border-[3px] border-gray-700">
+            {/* Notch */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[120px] h-[28px] bg-black rounded-b-2xl z-10" />
+            {/* Screen */}
+            <div className="w-full h-full bg-[#FFF5F5] rounded-[2.4rem] flex flex-col items-center justify-center overflow-hidden">
+              <Image
+                src="/app-icon.png"
+                alt="Love Notes App Icon"
+                width={120}
+                height={120}
+                className="rounded-[26px] shadow-lg mb-4"
+              />
+              <p className="text-sm font-semibold text-gray-800">Love Notes</p>
+            </div>
+          </div>
+        </div>
+
         <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-4">
           Love Notes
         </h1>
