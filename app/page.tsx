@@ -35,45 +35,50 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center px-6 pt-16 pb-20 text-center">
-        {/* iPhone Mockup */}
-        <div className="mb-10">
-          <div className="relative w-[240px] h-[480px] bg-[#1a1a1a] rounded-[3rem] p-[10px] shadow-2xl border-[3px] border-gray-600">
-            <div className="absolute top-[6px] left-1/2 -translate-x-1/2 w-[100px] h-[26px] bg-[#1a1a1a] rounded-b-2xl z-10" />
-            <div className="w-full h-full bg-[#FFF5F5] rounded-[2.4rem] flex flex-col items-center justify-center overflow-hidden relative">
-              <Image
-                src="/app-icon.png"
-                alt="Love Notes App Icon"
-                width={140}
-                height={140}
-                className="rounded-[30px] shadow-lg"
-              />
+      <section className="px-6 pt-16 pb-20">
+        <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          {/* Text Content */}
+          <div className="flex-1 text-center lg:text-left order-2 lg:order-1">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 leading-tight">
+              Send love notes.
+              <br />
+              <span className="text-accent">Draw your love.</span>
+            </h1>
+            <p className="text-lg sm:text-xl text-foreground/60 max-w-lg mb-8 leading-relaxed mx-auto lg:mx-0">
+              The couples app that connects you through hand-drawn doodles,
+              stickers, messages, and more — in a private space just for the two
+              of you.
+            </p>
+
+            {/* App Store Button */}
+            <div id="download">
+              <div className="inline-flex items-center gap-2 bg-foreground text-white px-7 py-3.5 rounded-2xl text-lg font-semibold hover:opacity-90 transition-opacity cursor-pointer shadow-lg">
+                <svg
+                  className="w-6 h-6"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                </svg>
+                Coming soon on the App Store
+              </div>
             </div>
           </div>
-        </div>
 
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight mb-4 max-w-2xl leading-tight">
-          Send love notes.
-          <br />
-          <span className="text-accent">Draw your love.</span>
-        </h1>
-        <p className="text-lg sm:text-xl text-foreground/60 max-w-lg mb-8 leading-relaxed">
-          The couples app that connects you through hand-drawn doodles,
-          stickers, messages, and more — in a private space just for the two of
-          you.
-        </p>
-
-        {/* App Store Button */}
-        <div id="download" className="mb-6">
-          <div className="inline-flex items-center gap-2 bg-foreground text-white px-7 py-3.5 rounded-2xl text-lg font-semibold hover:opacity-90 transition-opacity cursor-pointer shadow-lg">
-            <svg
-              className="w-6 h-6"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-            >
-              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-            </svg>
-            Coming soon on the App Store
+          {/* iPhone Mockup */}
+          <div className="flex-shrink-0 order-1 lg:order-2">
+            <div className="relative w-[220px] h-[440px] bg-[#1a1a1a] rounded-[3rem] p-[10px] shadow-2xl border-[3px] border-gray-600">
+              <div className="absolute top-[6px] left-1/2 -translate-x-1/2 w-[90px] h-[24px] bg-[#1a1a1a] rounded-b-2xl z-10" />
+              <div className="w-full h-full bg-[#FFF5F5] rounded-[2.4rem] flex flex-col items-center justify-center overflow-hidden relative">
+                <Image
+                  src="/app-icon.png"
+                  alt="Love Notes App Icon"
+                  width={120}
+                  height={120}
+                  className="rounded-[26px] shadow-lg"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -88,7 +93,7 @@ export default function Home() {
             Simple features that make every day a little more special.
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <FeatureCard
               emoji="🎨"
               title="Draw Together"
@@ -108,6 +113,16 @@ export default function Home() {
               emoji="🔥"
               title="Love Streaks"
               description="Keep your streak alive by sending doodles every day. Watch your love grow."
+            />
+            <FeatureCard
+              emoji="📸"
+              title="Photo Doodles"
+              description="Draw on top of photos and send them as personalized love notes to your partner."
+            />
+            <FeatureCard
+              emoji="🩷"
+              title="Stickers"
+              description="Express yourself with cute stickers you can place anywhere on your doodles."
             />
             <FeatureCard
               emoji="✍️"
