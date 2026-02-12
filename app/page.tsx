@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="min-h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col overflow-x-hidden">
       {/* Header */}
       <header className="w-full bg-white/80 backdrop-blur-sm sticky top-0 z-50 border-b border-accent-light/30">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -156,8 +156,8 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white py-12 px-6 border-t border-foreground/5">
-        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center sm:items-start justify-between gap-8">
+      <footer className="bg-white py-12 px-6 border-t border-foreground/5 overflow-hidden">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-8">
           <div className="flex flex-col items-center sm:items-start gap-2">
             <div className="flex items-center gap-2">
               <Image
@@ -174,8 +174,8 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-8 text-sm">
-            <div className="flex flex-col gap-2">
+          <div className="flex flex-row gap-10 text-sm">
+            <div className="flex flex-col items-center sm:items-start gap-2">
               <span className="font-semibold text-foreground/70">Legal</span>
               <Link
                 href="/privacy"
@@ -190,7 +190,7 @@ export default function Home() {
                 Terms of Service
               </Link>
             </div>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col items-center sm:items-start gap-2">
               <span className="font-semibold text-foreground/70">Support</span>
               <a
                 href="mailto:support@love-notes.app"
