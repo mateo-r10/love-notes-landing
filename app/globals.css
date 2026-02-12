@@ -1,10 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FFF5F5;
-  --foreground: #1a1a1a;
+  --background: #FFF0F0;
+  --foreground: #2D1B1B;
   --accent: #E8607A;
   --accent-light: #F9B4C2;
+  --card-bg: #FFFFFF;
+  --section-alt: #FFF8F8;
 }
 
 @theme inline {
@@ -12,6 +14,8 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-light: var(--accent-light);
+  --color-card: var(--card-bg);
+  --color-section-alt: var(--section-alt);
   --font-sans: var(--font-geist-sans);
 }
 
