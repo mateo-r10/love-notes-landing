@@ -75,6 +75,7 @@ export default function Home() {
                   alt="Love Notes App Icon"
                   width={120}
                   height={120}
+                  priority
                   className="rounded-[26px] shadow-lg"
                 />
               </div>

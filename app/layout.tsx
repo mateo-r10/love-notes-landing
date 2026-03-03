@@ -5,6 +5,7 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // evita texto invisible y reduce render-blocking (FOIT → FOUT controlado)
 });
 
 export const metadata: Metadata = {
@@ -19,6 +20,10 @@ export const metadata: Metadata = {
     siteName: "Love Notes",
     type: "website",
   },
+  // Google Search Console: configura NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION en .env.local o en tu host
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION && {
+    verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
+  }),
 };
 
 export default function RootLayout({
@@ -28,6 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        {/* El título, description, openGraph, etc. los inyecta Next.js desde el objeto metadata de arriba. */}
+        {/* Google Search Console: si no usas la variable de entorno, pega aquí la meta tag:
+            <meta name="google-site-verification" content="TU_CODIGO_DE_VERIFICACION" /> */}
+      </head>
       <body className={`${geistSans.variable} antialiased`}>{children}</body>
     </html>
   );
